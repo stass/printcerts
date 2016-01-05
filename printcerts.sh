@@ -13,6 +13,6 @@ if ("$certs" == "") then
 endif
 
 foreach p ($certs)
-	/usr/bin/sed -n "${p}p" "${file}" | openssl x509 -text
+	/usr/bin/sed -n "${p}p" "${file}" | openssl x509 -text -fingerprint
 	echo
 end
